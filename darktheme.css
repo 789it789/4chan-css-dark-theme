@@ -1,0 +1,125 @@
+/* Background */
+body {
+ background: none;
+ background-color: #222;
+ color: #929492;
+ font-size:80%;
+}
+ 
+ 
+/* General links */
+a {
+ color: #797;
+ text-decoration:none;
+}
+a:hover {
+ color: #9f9;
+}
+a:visited {
+ color: #977;
+}
+ 
+a.quotelink {
+    color: #FFFFFF;
+}
+ 
+/* Board list */
+#boardNavDesktop a {
+ color: #797!important;
+}
+#boardNavDesktop a:visited {
+ color: #a88!important;
+}
+#boardNavDesktop a:hover {
+ color: #8f8!important;
+}
+ 
+/* random other links */
+.postNum a, a.quotelink, .nameBlock, .nameBlock a {
+ color: #88957a!important;
+}
+ 
+/* stuff */
+hr {
+ border-color:#454;
+}
+ 
+/* posts */
+div.reply {
+ background:none!important;
+ background-color: #333!important;
+ border: 1px solid #444!important;
+ border-radius:5px!important;
+ box-shadow:0px 0px 6px black!important;
+}
+ 
+div.op .fileThumb img {
+ box-shadow:0px 0px 6px black;
+}
+ 
+.sideArrows {
+ display:none;
+}
+.postingMode {
+ font-family: Monospace;
+ color:#888!important;
+ background-color:#444844!important;
+ border-top:1px solid #484a48!important;
+ border-bottom:1px solid #484a48!important;
+}
+table.postForm > tbody > tr > td:first-child {
+ background-color:transparent;
+ border:0px;
+ color:#aaa;
+ vertical-align:top;
+}
+.postForm textarea, .postForm input, input[type="file"] {
+ background-color:#444;
+ border:1px solid #555!important;
+ border-radius:2px;
+ padding:2px;
+ color:#aaa;
+ box-shadow:0px 0px 6px black;
+ margin:1px;
+}
+.globalMessage {
+ color:#FFD24D!important;
+}
+ 
+/* Displays post number */
+body{counter-reset:posts;}
+div.reply{counter-increment: posts;}
+ 
+div.reply div.postInfo:after{
+float: right;
+font-size: 10px !important;
+color: white;
+opacity: 0.4;
+margin-left: 4px;
+padding: 2px;
+content: "#"counter(posts);
+}
+ 
+div.reply div.reply div.postInfo:after, div.op > div.postInfo:after{display:none;}
+ 
+/*Makes the comment box bigger*/
+textarea{height:10em !important;width:30em !important;}
+ 
+/*removes the logo and board title.*/
+img.title,div.boardTitle,div.boardSubtitle{display:none !important;}
+ 
+/*removes the rules and info underneath the post box*/
+ul.rules{display:none !important;}
+ 
+/*floating nav footer*/
+#boardNavDesktopFoot {
+display: block;
+position: fixed;
+bottom: 0px;
+left: 0px;
+background: #222;
+width: 100%;
+border-top: 1px solid #444;
+padding-top: 0px !important;
+height: 30px !important;
+}
